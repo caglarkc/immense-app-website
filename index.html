@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMMENSE - Fitness Sosyal Platformu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">IMMENSE<span class="dot">.</span></a>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#features">Özellikler</a></li>
+                    <li><a href="#community">Topluluk</a></li>
+                    <li><a href="#coaching">Koçluk</a></li>
+                    <li><a href="#ai-coach">AI Koç</a></li>
+                    <li><a href="#preregister">Ön Kayıt</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#preregister" class="btn btn-primary">Ön Kayıt Ol</a>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">Fitness Sosyal Platformu</span>
+                <h1>Antrenmanlarını <br><span class="gradient-text">Geleceğe Taşı</span></h1>
+                <p>IMMENSE, antrenman takibi, beslenme yönetimi, sosyal paylaşım, AI koçluk ve insan koçluğunu tek
+                    platformda birleştiren kapsamlı fitness sosyal platformu.</p>
+                <div class="cta-group">
+                    <a href="#preregister" class="btn btn-primary">Ön Kayıt Ol</a>
+                    <a href="#community" class="btn btn-secondary">Keşfet <i class="fas fa-arrow-down"></i></a>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="number">8</span>
+                        <span class="label">Egzersiz Türü</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number"><i class="fas fa-users"></i></span>
+                        <span class="label">Sosyal Platform</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">AI + <i class="fas fa-user"></i></span>
+                        <span class="label">Koçluk Sistemi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="screen">
+                        <div class="app-screen-profile">
+                            <!-- Top bar -->
+                            <div class="mock-topbar">
+                                <span class="mock-username">ali_yilmaz</span>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <!-- Profile info -->
+                            <div class="mock-profile-info">
+                                <div class="mock-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="mock-name">Ali Yılmaz</div>
+                                <div class="mock-location"><i class="fas fa-map-marker-alt"></i> İstanbul, TR</div>
+                            </div>
+                            <!-- Stats row -->
+                            <div class="mock-stats-row">
+                                <div class="mock-stat">
+                                    <span class="mock-stat-num">142</span>
+                                    <span class="mock-stat-label">ANTRENMAN</span>
+                                </div>
+                                <div class="mock-stat">
+                                    <span class="mock-stat-num">1.2K</span>
+                                    <span class="mock-stat-label">TAKİPÇİ</span>
+                                </div>
+                                <div class="mock-stat">
+                                    <span class="mock-stat-num">150</span>
+                                    <span class="mock-stat-label">TAKİP</span>
+                                </div>
+                            </div>
+                            <!-- Quick action chips -->
+                            <div class="mock-chips">
+                                <span class="mock-chip"><i class="fas fa-chart-bar"></i> İstatistik</span>
+                                <span class="mock-chip"><i class="fas fa-dumbbell"></i> Egzersizler</span>
+                                <span class="mock-chip"><i class="fas fa-ruler"></i> Ölçüm</span>
+                            </div>
+                            <!-- Recent Activity -->
+                            <div class="mock-activity">
+                                <div class="mock-activity-title">SON AKTİVİTE</div>
+                                <div class="mock-post-card">
+                                    <div class="mock-post-header">
+                                        <div class="mock-post-avatar">AY</div>
+                                        <div class="mock-post-meta">
+                                            <span>ali_yilmaz</span>
+                                            <span class="mock-post-time">Bugün 08:30 • Salon</span>
+                                        </div>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="mock-post-tags">
+                                        <span class="mock-tag leg">LEG DAY</span>
+                                        <span class="mock-tag star"><i class="fas fa-star"></i> 4.8</span>
+                                    </div>
+                                    <div class="mock-post-image">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                    <div class="mock-post-title">Afternoon Grind</div>
+                                    <div class="mock-post-bottom">
+                                        <div class="mock-post-metrics">
+                                            <span>VOL. <strong>12k kg</strong></span>
+                                            <span>PRS <strong>2</strong></span>
+                                        </div>
+                                        <div class="mock-post-actions">
+                                            <i class="fas fa-heart"></i>
+                                            <i class="fas fa-comment"></i>
+                                            <i class="fas fa-share"></i>
+                                            <span class="mock-likes"><i class="fas fa-heart"></i> 1.2K</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bottom nav -->
+                            <div class="mock-bottom-nav">
+                                <div class="mock-nav-item"><i class="fas fa-home"></i><span>Ana Sayfa</span></div>
+                                <div class="mock-nav-item"><i class="fas fa-compass"></i><span>Keşfet</span></div>
+                                <div class="mock-nav-item mock-nav-center"><i class="fas fa-plus"></i></div>
+                                <div class="mock-nav-item"><i class="fas fa-utensils"></i><span>Beslenme</span></div>
+                                <div class="mock-nav-item mock-nav-active"><i class="fas fa-user"></i><span>Profil</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <i class="fas fa-fire"></i>
+                    <div>
+                        <span>Günlük Seri</span>
+                        <strong>12 Gün</strong>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <span>Toplam Hacim</span>
+                        <strong>15,250 kg</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background-globes">
+            <div class="globe globe-1"></div>
+            <div class="globe globe-2"></div>
+        </div>
+    </header>
+
+    <!-- ========== BÖLÜM 3: FİTNESS TOPLULUĞUN ========== -->
+    <section id="community" class="community-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Sosyal Platform</span>
+                <h2>Sadece Takip Etme, <span class="gradient-text">Paylaş</span></h2>
+                <p>IMMENSE sadece bir antrenman uygulaması değil - fitness dünyasının sosyal ağı.</p>
+            </div>
+            <div class="community-content">
+                <div class="community-text">
+                    <div class="community-feature">
+                        <div class="icon-box"><i class="fas fa-stream"></i></div>
+                        <div>
+                            <h3>Sosyal Akış</h3>
+                            <p>Instagram benzeri feed ile antrenmanlarını paylaş, arkadaşlarının gelişimini takip et.</p>
+                        </div>
+                    </div>
+                    <div class="community-feature">
+                        <div class="icon-box"><i class="fas fa-compass"></i></div>
+                        <div>
+                            <h3>Keşfet Sayfası</h3>
+                            <p>Yeni rutinler keşfet, popüler antrenman programlarını incele ve ilham al.</p>
+                        </div>
+                    </div>
+                    <div class="community-feature">
+                        <div class="icon-box"><i class="fas fa-share-alt"></i></div>
+                        <div>
+                            <h3>Rutin Paylaşımı</h3>
+                            <p>Kendi rutinlerini toplulukla paylaş veya hazır rutinleri kütüphaneden al.</p>
+                        </div>
+                    </div>
+                    <div class="community-feature">
+                        <div class="icon-box"><i class="fas fa-people-arrows"></i></div>
+                        <div>
+                            <h3>Gym Partner Bul</h3>
+                            <p>Aynı salonda antrenman yapan kişilerle eşleş, birlikte çalış.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="community-visual">
+                    <div class="social-feed-mockup">
+                        <div class="feed-header">
+                            <i class="fas fa-home"></i>
+                            <span>Akış</span>
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="feed-post">
+                            <div class="post-header">
+                                <div class="post-avatar">AK</div>
+                                <div>
+                                    <strong>Ahmet K.</strong>
+                                    <span>Push Day tamamlandı</span>
+                                </div>
+                            </div>
+                            <div class="post-body">
+                                <div class="post-stat">
+                                    <i class="fas fa-dumbbell"></i>
+                                    <span>8 Egzersiz</span>
+                                </div>
+                                <div class="post-stat">
+                                    <i class="fas fa-weight-hanging"></i>
+                                    <span>12,450 kg Hacim</span>
+                                </div>
+                                <div class="post-stat">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1s 15dk</span>
+                                </div>
+                                <div class="post-pr">
+                                    <i class="fas fa-trophy"></i> Yeni PR! Bench Press 110kg
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <span><i class="fas fa-heart"></i> 24</span>
+                                <span><i class="fas fa-comment"></i> 8</span>
+                                <span><i class="fas fa-share"></i></span>
+                            </div>
+                        </div>
+                        <div class="feed-post mini">
+                            <div class="post-header">
+                                <div class="post-avatar green">EY</div>
+                                <div>
+                                    <strong>Elif Y.</strong>
+                                    <span>Yeni rutin paylaştı</span>
+                                </div>
+                            </div>
+                            <div class="post-body">
+                                <div class="post-routine-tag">
+                                    <i class="fas fa-clipboard-list"></i> Upper/Lower 4 Gün
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <span><i class="fas fa-heart"></i> 56</span>
+                                <span><i class="fas fa-download"></i> 12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BÖLÜM 4: ANTRENMAN & BESLENME TAKİBİ ========== -->
+    <section id="features" class="tracking-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Eksiksiz Takip</span>
+                <h2>Antrenman & Beslenme <span class="gradient-text">Tek Platformda</span></h2>
+                <p>Antrenmanından beslenmene kadar her şeyi detaylı şekilde kaydet ve analiz et.</p>
+            </div>
+            <div class="tracking-tabs">
+                <button class="tab-btn active" data-tab="workout"><i class="fas fa-dumbbell"></i> Antrenman</button>
+                <button class="tab-btn" data-tab="nutrition"><i class="fas fa-utensils"></i> Beslenme</button>
+            </div>
+            <div class="tracking-content">
+                <!-- Antrenman Tab -->
+                <div class="tab-panel active" id="tab-workout">
+                    <div class="feature-grid-3">
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-clipboard-list"></i></div>
+                            <h3>Rutin Oluşturma</h3>
+                            <p>Kendi rutinlerini oluştur, düzenle ve organize et. Superset, dropset ve daha fazlası.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-play-circle"></i></div>
+                            <h3>Canlı Antrenman</h3>
+                            <p>Kronometre, dinlenme sayacı, set takibi ile antrenmanını canlı kaydet.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                            <h3>8 Egzersiz Türü</h3>
+                            <p>Ağırlık, vücut ağırlığı, kardiyo, süre bazlı, mesafe ve daha fazlası.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-trophy"></i></div>
+                            <h3>PR Takibi & 1RM</h3>
+                            <p>Kişisel rekorlarını otomatik takip et, 1RM hesaplaması yap.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-chart-area"></i></div>
+                            <h3>Detaylı İstatistikler</h3>
+                            <p>Hacim trendleri, kas grubu dağılımı, ilerleme grafikleri.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-calendar-alt"></i></div>
+                            <h3>Antrenman Takvimi</h3>
+                            <p>Geçmiş antrenmanlarını takvim görünümünde incele, tutarlılığını gör.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-ruler"></i></div>
+                            <h3>Vücut Ölçümü</h3>
+                            <p>Kilo, yağ oranı, kas kütlesi ve vücut ölçülerini takip et.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Beslenme Tab -->
+                <div class="tab-panel" id="tab-nutrition">
+                    <div class="feature-grid-3">
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-fire-alt"></i></div>
+                            <h3>Makro & Kalori Takibi</h3>
+                            <p>Günlük protein, karbonhidrat, yağ ve kalori alımını detaylı takip et.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-utensils"></i></div>
+                            <h3>Öğün Bazlı Kayıt</h3>
+                            <p>Kahvaltı, öğle, akşam ve ara öğünlerini ayrı ayrı kaydet.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-bullseye"></i></div>
+                            <h3>Hedef Belirleme</h3>
+                            <p>Bulk, cut veya maintenance hedefine göre makro ve kalori hedeflerini ayarla.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-capsules"></i></div>
+                            <h3>Suplement Takibi</h3>
+                            <p>Vitamin, kreatin, protein tozu gibi suplementlerini kaydet ve hatırlatma al.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-share-alt"></i></div>
+                            <h3>Beslenme Paylaşımı</h3>
+                            <p>Koçunla veya arkadaşlarınla beslenme günlüğünü paylaş.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-camera"></i></div>
+                            <h3>AI Yemek Tanıma</h3>
+                            <p>Yemeğinin fotoğrafını çek, AI otomatik olarak besin değerlerini hesaplasın.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-database"></i></div>
+                            <h3>Besin Veritabanı</h3>
+                            <p>Türkiye'ye özel besin veritabanı ile yerel yiyecekleri kolayca bul.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BÖLÜM 5: KOÇLUK SİSTEMİ ========== -->
+    <section id="coaching" class="coaching-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Profesyonel Destek</span>
+                <h2>İnsan Koç & AI Koç <span class="gradient-text">Tek Platformda</span></h2>
+                <p>İster profesyonel bir koçla çalış, ister AI koçla 7/24 destek al.</p>
+            </div>
+            <div class="coaching-content">
+                <div class="coaching-text">
+                    <div class="coaching-feature">
+                        <div class="icon-box"><i class="fas fa-search"></i></div>
+                        <div>
+                            <h3>Koç Marketplace</h3>
+                            <p>Uzmanlık alanı, fiyat ve puana göre filtrele, sana uygun koçu bul.</p>
+                        </div>
+                    </div>
+                    <div class="coaching-feature">
+                        <div class="icon-box"><i class="fas fa-desktop"></i></div>
+                        <div>
+                            <h3>Tek Panel Takip</h3>
+                            <p>Koçun tüm gelişimini - antrenman, beslenme, ölçümler - tek panelden takip eder.</p>
+                        </div>
+                    </div>
+                    <div class="coaching-feature">
+                        <div class="icon-box"><i class="fas fa-tasks"></i></div>
+                        <div>
+                            <h3>Program & Ödev</h3>
+                            <p>Koç sana program atar, ödev verir, feedback sağlar. Her şey uygulama içinde.</p>
+                        </div>
+                    </div>
+                    <div class="coaching-feature">
+                        <div class="icon-box"><i class="fas fa-comments"></i></div>
+                        <div>
+                            <h3>Mesajlaşma</h3>
+                            <p>Koçunla uygulama içi mesajlaşma ile anında iletişim kur.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coaching-visual">
+                    <div class="coach-dashboard-mockup">
+                        <div class="dashboard-header">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Koç Paneli</span>
+                        </div>
+                        <div class="dashboard-athlete">
+                            <div class="athlete-avatar">AK</div>
+                            <div class="athlete-info">
+                                <strong>Ahmet K.</strong>
+                                <span class="athlete-tag">Kas Kazanımı</span>
+                            </div>
+                            <span class="athlete-status active">Aktif</span>
+                        </div>
+                        <div class="dashboard-stats-row">
+                            <div class="dash-stat">
+                                <span class="dash-stat-value">16</span>
+                                <span class="dash-stat-label">Antrenman</span>
+                            </div>
+                            <div class="dash-stat">
+                                <span class="dash-stat-value">+3.2kg</span>
+                                <span class="dash-stat-label">Kilo</span>
+                            </div>
+                            <div class="dash-stat">
+                                <span class="dash-stat-value">92%</span>
+                                <span class="dash-stat-label">Uyum</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-progress">
+                            <div class="progress-label">
+                                <span>Haftalık İlerleme</span>
+                                <span>4/5 Antrenman</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="dashboard-actions">
+                            <button class="dash-btn"><i class="fas fa-clipboard-list"></i> Program Ata</button>
+                            <button class="dash-btn"><i class="fas fa-comment"></i> Mesaj</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BÖLÜM 6: AI KOÇ ========== -->
+    <section id="ai-coach" class="ai-section">
+        <div class="container">
+            <div class="ai-content">
+                <div class="ai-text">
+                    <span class="badge ai-badge">AI Powered</span>
+                    <h2>Kişisel AI Koçun <br><span class="gradient-text">Cebe Sığdı</span></h2>
+                    <p>IMMENSE AI, hedeflerine, verilerine ve vücut tipine göre sana özel antrenman ve beslenme
+                        programları oluşturur. İlerlemeni analiz eder, platolarını tespit eder ve seni sürekli ileriye
+                        taşır.</p>
+                    <ul class="ai-features">
+                        <li><i class="fas fa-check-circle"></i> Kişiye özel program oluşturma</li>
+                        <li><i class="fas fa-check-circle"></i> İlerleme analizi ve yorumlama</li>
+                        <li><i class="fas fa-check-circle"></i> Form analizi (video)</li>
+                        <li><i class="fas fa-check-circle"></i> Beslenme planı oluşturma</li>
+                        <li><i class="fas fa-check-circle"></i> 7/24 koçluk desteği</li>
+                        <li><i class="fas fa-check-circle"></i> Plato tespiti ve çözüm önerisi</li>
+                    </ul>
+                </div>
+                <div class="ai-visual">
+                    <div class="chat-interface">
+                        <div class="chat-header-bar">
+                            <div class="ai-avatar"><i class="fas fa-robot"></i></div>
+                            <div>
+                                <strong>IMMENSE AI Koç</strong>
+                                <span class="online-dot">Çevrimiçi</span>
+                            </div>
+                        </div>
+                        <div class="message ai">
+                            <div class="ai-avatar"><i class="fas fa-robot"></i></div>
+                            <p>Merhaba Ahmet! Son 3 haftadır bench press'te plato yaşadığını görüyorum. Verilerine
+                                baktığımda hacminin artmasına rağmen 1RM'in değişmemiş.</p>
+                        </div>
+                        <div class="message user">
+                            <p>Evet, 100kg'ı geçemiyorum. Ne önerirsin?</p>
+                        </div>
+                        <div class="message ai">
+                            <div class="ai-avatar"><i class="fas fa-robot"></i></div>
+                            <p>Sana 3 haftalık bir plato kırma programı hazırladım. İlk hafta %85 yoğunlukta 5x3,
+                                ikinci hafta pause bench ekleyeceğiz, üçüncü hafta deload sonrası yeni PR denemesi.
+                                Programı rutinlerine ekledim!</p>
+                        </div>
+                        <div class="message user">
+                            <p>Harika! Beslenme tarafında da bir değişiklik yapmalı mıyım?</p>
+                        </div>
+                        <div class="message ai">
+                            <div class="ai-avatar"><i class="fas fa-robot"></i></div>
+                            <p>Kesinlikle. Son 1 haftadaki beslenme kayıtlarına baktığımda protein alımın hedefin altında
+                                kalıyor. Günlük 180g protein hedefini tutturmak için öğün planını güncelledim. 💪</p>
+                        </div>
+                        <div class="input-area">
+                            <span>Mesaj yaz...</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BÖLÜM 7: DAHA FAZLASI ========== -->
+    <section id="more-features" class="more-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Ve Daha Fazlası</span>
+                <h2>Her Detay <span class="gradient-text">Düşünüldü</span></h2>
+                <p>IMMENSE, fitness yolculuğunun her adımında yanında.</p>
+            </div>
+            <div class="more-grid">
+                <div class="more-card">
+                    <div class="more-icon"><i class="fas fa-medal"></i></div>
+                    <h3>Challenge & Başarımlar</h3>
+                    <p>Rozetler kazan, challenge'lara katıl, liderlik tablosunda yüksel.</p>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon"><i class="fas fa-music"></i></div>
+                    <h3>Müzik Entegrasyonu</h3>
+                    <p>Spotify ve Apple Music ile antrenman boyunca müzik dinle.</p>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h3>Detaylı Raporlar</h3>
+                    <p>İlerleme raporlarını PDF olarak indir, koçunla paylaş.</p>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon"><i class="fas fa-watch"></i></div>
+                    <h3>Giyilebilir Cihazlar</h3>
+                    <p>Apple Watch ve Garmin ile otomatik senkronizasyon.</p>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon"><i class="fas fa-bell"></i></div>
+                    <h3>Akıllı Bildirimler</h3>
+                    <p>Antrenman hatırlatmaları, suplement zamanı ve motivasyon bildirimleri.</p>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Arkadaş Karşılaştırması</h3>
+                    <p>Arkadaşlarınla istatistiklerini karşılaştır, leaderboard'da yarış.</p>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon"><i class="fas fa-wifi-slash"></i></div>
+                    <h3>Çevrimdışı Mod</h3>
+                    <p>İnternet olmadan da antrenmanını kaydet, sonra senkronize et.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BÖLÜM 8: NASIL ÇALIŞIR? ========== -->
+    <section id="how-it-works" class="how-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nasıl <span class="gradient-text">Çalışır?</span></h2>
+                <p>4 adımda fitness dönüşümünü başlat.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+                    <h3>Kaydol & Profilini Oluştur</h3>
+                    <p>Hedeflerini, deneyim seviyeni ve tercihlerini belirle.</p>
+                </div>
+                <div class="step-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Programını Al</h3>
+                    <p>Kendi rutinini oluştur veya AI'dan kişisel program al.</p>
+                </div>
+                <div class="step-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-pen-alt"></i></div>
+                    <h3>Kaydet & Paylaş</h3>
+                    <p>Antrenmanını kaydet, beslenmeni takip et, toplulukla paylaş.</p>
+                </div>
+                <div class="step-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Gelişimini Takip Et</h3>
+                    <p>İlerlemeni analiz et, toplulukla büyü, koçunla ilerle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BÖLÜM 9: NEDEN IMMENSE? ========== -->
+    <section id="why-immense" class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Neden <span class="gradient-text">IMMENSE?</span></h2>
+                <p>Diğer uygulamalar bir şeyi iyi yapar. IMMENSE hepsini bir arada sunar.</p>
+            </div>
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comp-feature">Özellik</div>
+                    <div class="comp-col">Diğer Tracker'lar</div>
+                    <div class="comp-col">Sosyal Uygulamalar</div>
+                    <div class="comp-col highlight">IMMENSE</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comp-feature">Antrenman Takibi</div>
+                    <div class="comp-col"><i class="fas fa-check green"></i></div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col highlight"><i class="fas fa-check green"></i></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comp-feature">Beslenme Takibi</div>
+                    <div class="comp-col"><i class="fas fa-minus yellow"></i></div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col highlight"><i class="fas fa-check green"></i></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comp-feature">Sosyal Platform</div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col"><i class="fas fa-check green"></i></div>
+                    <div class="comp-col highlight"><i class="fas fa-check green"></i></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comp-feature">AI Koçluk</div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col highlight"><i class="fas fa-check green"></i></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comp-feature">İnsan Koç Marketplace</div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col highlight"><i class="fas fa-check green"></i></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comp-feature">Rutin Paylaşımı</div>
+                    <div class="comp-col"><i class="fas fa-minus yellow"></i></div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col highlight"><i class="fas fa-check green"></i></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comp-feature">Gym Partner Eşleşme</div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col"><i class="fas fa-times red"></i></div>
+                    <div class="comp-col highlight"><i class="fas fa-check green"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BÖLÜM 10: ÖN KAYIT ========== -->
+    <section id="preregister" class="preregister-section">
+        <div class="container">
+            <div class="preregister-content">
+                <div class="preregister-text">
+                    <h2>İlk Kullananlardan <span class="gradient-text">Ol</span></h2>
+                    <p>Ön kayıt ol, beta sürecine katıl ve Premium özellikleri yaşam boyu ücretsiz kullan.</p>
+                    <div class="trust-badges">
+                        <div class="trust-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Sınırlı Kontenjan</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-crown"></i>
+                            <span>Premium Yaşam Boyu Ücretsiz</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Spam Yok, Söz</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="preregister-form-wrapper">
+                    <form id="preregister-form" class="preregister-form">
+                        <div class="form-group">
+                            <label for="user_name">İsim</label>
+                            <input type="text" id="user_name" name="user_name" placeholder="Adın" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user_email">E-posta</label>
+                            <input type="email" id="user_email" name="user_email" placeholder="ornek@email.com"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                            <span class="btn-text">Ön Kayıt Ol</span>
+                            <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i>
+                                Gönderiliyor...</span>
+                        </button>
+                    </form>
+                    <div id="form-success" class="form-success" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Kaydın Alındı!</h3>
+                        <p>Erken erişim başladığında sana haber vereceğiz. Fitness topluluğumuza hoş geldin!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">IMMENSE<span class="dot">.</span></a>
+                    <p>Fitness yolculuğunda en güçlü yardımcın. Antrenman, beslenme, sosyal platform ve koçluk - hepsi
+                        bir arada.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#features">Özellikler</a></li>
+                        <li><a href="#community">Topluluk</a></li>
+                        <li><a href="#coaching">Koçluk</a></li>
+                        <li><a href="#ai-coach">AI Koç</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Destek</h4>
+                    <ul>
+                        <li><a href="#">Yardım Merkezi</a></li>
+                        <li><a href="#">Bize Ulaşın</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Keşfet</h4>
+                    <ul>
+                        <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
+                        <li><a href="#why-immense">Neden IMMENSE?</a></li>
+                        <li><a href="#preregister">Ön Kayıt</a></li>
+                        <li><a href="#more-features">Tüm Özellikler</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IMMENSE. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
