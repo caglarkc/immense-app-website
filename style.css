@@ -186,9 +186,17 @@ h1, h2, h3, h4 {
 }
 
 .logo img {
-    height: 48px;
+    height: 38px;
+    max-height: 38px;
     width: auto;
+    max-width: 120px;
     display: block;
+    object-fit: contain;
+}
+
+.navbar .logo img {
+    height: 38px;
+    max-height: 38px;
 }
 
 .logo .dot {
