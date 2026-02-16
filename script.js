@@ -1,4 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Geri Sayım - 15 Mart 2026 00:00:00
+    const countdownDate = new Date('2026-03-15T00:00:00').getTime();
+    const daysEl = document.getElementById('countdown-days');
+    const hoursEl = document.getElementById('countdown-hours');
+    const minutesEl = document.getElementById('countdown-minutes');
+    const secondsEl = document.getElementById('countdown-seconds');
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = countdownDate - now;
+
+        if (diff <= 0) {
+            if (daysEl) daysEl.textContent = '00';
+            if (hoursEl) hoursEl.textContent = '00';
+            if (minutesEl) minutesEl.textContent = '00';
+            if (secondsEl) secondsEl.textContent = '00';
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
     // Hero Phone Slider
     const heroSlider = document.querySelector('.app-slider');
     const heroDots = document.querySelectorAll('.screen-slider .slider-dots .dot');

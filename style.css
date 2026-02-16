@@ -1044,6 +1044,121 @@ h1, h2, h3, h4 {
     100% { transform: scale(1.2); opacity: 0.6; }
 }
 
+/* ========== GERİ SAYIM ========== */
+.countdown-section {
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 32px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(52, 211, 153, 0.04) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.5), transparent);
+    opacity: 0.8;
+}
+
+.countdown-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.countdown-label i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 56px;
+}
+
+.countdown-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+}
+
+.countdown-suffix {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+.countdown-sep {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(16, 185, 129, 0.4);
+    margin: 0 2px;
+    animation: countdown-blink 1s ease-in-out infinite;
+}
+
+@keyframes countdown-blink {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .countdown-wrap {
+        padding: 20px 16px;
+        gap: 12px;
+    }
+
+    .countdown-value {
+        font-size: 1.4rem;
+    }
+
+    .countdown-unit {
+        min-width: 48px;
+    }
+
+    .countdown-sep {
+        font-size: 1.2rem;
+    }
+}
+
 /* ========== SECTION HEADER (shared) ========== */
 .section-header {
     text-align: center;
