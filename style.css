@@ -250,7 +250,7 @@ h1, h2, h3, h4 {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.2fr minmax(320px, 400px);
     gap: 50px;
     align-items: center;
     position: relative;
@@ -311,6 +311,9 @@ h1, h2, h3, h4 {
 .hero-image {
     position: relative;
     perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .phone-mockup {
@@ -387,9 +390,11 @@ h1, h2, h3, h4 {
 /* Phone Slider */
 .phone-slider-wrap {
     position: relative;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0;
+    width: 320px;
 }
 
 .slider-arrow {
@@ -464,8 +469,6 @@ h1, h2, h3, h4 {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    /* Sağa kayma düzeltmesi - gerekirse değeri değiştir (örn: -4px, -8px) */
-    transform: translateX(-6px);
 }
 
 .app-slide img {
@@ -474,8 +477,8 @@ h1, h2, h3, h4 {
     min-width: 100%;
     min-height: 100%;
     max-width: 100%;
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
+    object-position: center top;
     display: block;
     margin: 0;
     padding: 0;
