@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Hero Phone Slider
+    const heroSlider = document.querySelector('.app-slider');
+    const heroDots = document.querySelectorAll('.screen-slider .slider-dots .dot');
+    const heroPrevBtn = document.querySelector('.slider-arrow-left');
+    const heroNextBtn = document.querySelector('.slider-arrow-right');
+
+    if (heroSlider && heroDots.length) {
+        let heroCurrentIndex = 0;
+        const heroTotalSlides = heroDots.length;
+
+        function goToHeroSlide(index) {
+            heroCurrentIndex = Math.max(0, Math.min(index, heroTotalSlides - 1));
+            heroSlider.style.transform = `translateX(-${heroCurrentIndex * 100}%)`;
+            heroDots.forEach((dot, i) => dot.classList.toggle('active', i === heroCurrentIndex));
+        }
+
+        heroPrevBtn?.addEventListener('click', () => goToHeroSlide(heroCurrentIndex - 1));
+        heroNextBtn?.addEventListener('click', () => goToHeroSlide(heroCurrentIndex + 1));
+        heroDots.forEach((dot, i) => dot.addEventListener('click', () => goToHeroSlide(i)));
+    }
+
     // Custom Cursor
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorOutline = document.querySelector('.cursor-outline');
