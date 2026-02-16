@@ -180,6 +180,15 @@ h1, h2, h3, h4 {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 48px;
+    width: auto;
+    display: block;
 }
 
 .logo .dot {
@@ -1991,6 +2000,10 @@ h1, h2, h3, h4 {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
     margin-bottom: 60px;
+}
+
+.footer-brand .logo img {
+    height: 42px;
 }
 
 .footer-brand p {
