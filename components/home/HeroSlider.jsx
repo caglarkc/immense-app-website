@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/publicPath";
 import { useEffect, useState } from "react";
 
 const SLIDES = [
@@ -12,8 +13,8 @@ const SLIDES = [
     titleLine2: "çözümler",
     description:
       "Ofis, konut ve ticari alanlarda markanıza ve günlük kullanıma uygun ölçeklenebilir projeler üretiyoruz.",
-    main: "/assets/mainPage/slayt1.jpg",
-    overlap: "/assets/mainPage/slayt2.jpg",
+    main: withBasePath("/assets/mainPage/slayt1.jpg"),
+    overlap: withBasePath("/assets/mainPage/slayt2.jpg"),
   },
   {
     id: "2",
@@ -21,8 +22,8 @@ const SLIDES = [
     titleLine2: "buluşturuyoruz",
     description:
       "Ön tasarımdan uygulama aşamasına kadar her adımda şeffaf iletişim ve net programlar sunuyoruz.",
-    main: "/assets/mainPage/slayt2.jpg",
-    overlap: "/assets/mainPage/slayt3.jpg",
+    main: withBasePath("/assets/mainPage/slayt2.jpg"),
+    overlap: withBasePath("/assets/mainPage/slayt3.jpg"),
   },
   {
     id: "3",
@@ -30,8 +31,8 @@ const SLIDES = [
     titleLine2: "planda netlik",
     description:
       "Usta ekipler ve kontrollü iş akışıyla teslim tarihlerine uygun, sürdürülebilir malzeme seçimleriyle ilerliyoruz.",
-    main: "/assets/mainPage/slayt3.jpg",
-    overlap: "/assets/mainPage/slayt4.jpg",
+    main: withBasePath("/assets/mainPage/slayt3.jpg"),
+    overlap: withBasePath("/assets/mainPage/slayt4.jpg"),
   },
   {
     id: "4",
@@ -39,8 +40,8 @@ const SLIDES = [
     titleLine2: "denge",
     description:
       "Işık, akıllı depolama ve detaylarla günlük konforu ön planda tutan, zamansız mimari öneriler geliştiriyoruz.",
-    main: "/assets/mainPage/slayt4.jpg",
-    overlap: "/assets/mainPage/slayt1.jpg",
+    main: withBasePath("/assets/mainPage/slayt4.jpg"),
+    overlap: withBasePath("/assets/mainPage/slayt1.jpg"),
   },
 ];
 

@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/publicPath";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -80,7 +81,7 @@ export default function Navbar() {
           aria-label="CL Mimarlık — Ana sayfa"
         >
           <Image
-            src="/assets/logo.jpg"
+            src={withBasePath("/assets/logo.jpg")}
             alt="CL Mimarlık"
             fill
             className="object-cover"

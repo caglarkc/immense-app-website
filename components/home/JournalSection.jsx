@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/publicPath";
 
 /** Ana sayfa önizlemesi — yeni yazı için obje kopyalayıp `slug` + alanları ekleyin */
 export const JOURNAL_POSTS = [
   {
     slug: "crafting-comfort",
-    image: "/assets/mainPage/slayt1.jpg",
+    image: withBasePath("/assets/mainPage/slayt1.jpg"),
     date: "May 12, 2024",
     category: "Curatorial",
     title: "Crafting Comfort",
@@ -14,7 +15,7 @@ export const JOURNAL_POSTS = [
   },
   {
     slug: "light-and-volume",
-    image: "/assets/mainPage/slayt2.jpg",
+    image: withBasePath("/assets/mainPage/slayt2.jpg"),
     date: "June 3, 2024",
     category: "Studio",
     title: "Light and Volume",

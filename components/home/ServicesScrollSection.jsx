@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/publicPath";
 
 const SLIDES = [
   {
     id: "1",
-    image: "/assets/mainPage/slayt1.jpg",
+    image: withBasePath("/assets/mainPage/slayt1.jpg"),
     cardNum: "01.",
     cardLabel: "ÖZ FELSEFE",
     cardQuote:
@@ -22,7 +23,7 @@ const SLIDES = [
   },
   {
     id: "2",
-    image: "/assets/mainPage/slayt2.jpg",
+    image: withBasePath("/assets/mainPage/slayt2.jpg"),
     cardNum: "02.",
     cardLabel: "UYGULAMA",
     cardQuote:
@@ -40,7 +41,7 @@ const SLIDES = [
   },
   {
     id: "3",
-    image: "/assets/mainPage/slayt3.jpg",
+    image: withBasePath("/assets/mainPage/slayt3.jpg"),
     cardNum: "03.",
     cardLabel: "IŞIK",
     cardQuote:
@@ -58,7 +59,7 @@ const SLIDES = [
   },
   {
     id: "4",
-    image: "/assets/mainPage/slayt4.jpg",
+    image: withBasePath("/assets/mainPage/slayt4.jpg"),
     cardNum: "04.",
     cardLabel: "MALZEME",
     cardQuote: "Dokunuş hissi, göze değil ele hitap eder.",
@@ -75,7 +76,7 @@ const SLIDES = [
   },
   {
     id: "5",
-    image: "/assets/mainPage/slayt1.jpg",
+    image: withBasePath("/assets/mainPage/slayt1.jpg"),
     cardNum: "05.",
     cardLabel: "BİRLİKTE",
     cardQuote: "İyi mimarlık, dinleyerek başlar.",
