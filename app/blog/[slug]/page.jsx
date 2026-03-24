@@ -1,3 +1,9 @@
+import { JOURNAL_POSTS } from "../../../components/home/JournalSection";
+
+export function generateStaticParams() {
+  return JOURNAL_POSTS.map((post) => ({ slug: post.slug }));
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   return {

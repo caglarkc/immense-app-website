@@ -6,6 +6,10 @@ const TITLES = {
   "izolasyon-uygulamalari": "İzolasyon uygulamaları",
 };
 
+export function generateStaticParams() {
+  return Object.keys(TITLES).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const title = TITLES[slug] ?? "Hizmet";
