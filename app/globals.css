@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --transition-duration: 300ms;
+  --spacing-section: clamp(4rem, 10vw, 9rem);
+}
