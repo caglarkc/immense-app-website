@@ -212,6 +212,26 @@
             </div>
         </div>
     </section>
+    <script>
+        (function() {
+            var target = new Date(2026, 3, 16, 0, 0, 0).getTime();
+            function tick() {
+                var d = document.getElementById("countdown-days");
+                var h = document.getElementById("countdown-hours");
+                var m = document.getElementById("countdown-minutes");
+                var s = document.getElementById("countdown-seconds");
+                if (!d || !h || !m || !s) return;
+                var diff = target - Date.now();
+                if (diff <= 0) { d.textContent = h.textContent = m.textContent = s.textContent = "00"; return; }
+                d.textContent = String(Math.floor(diff / 86400000)).padStart(2, "0");
+                h.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
+                m.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+                s.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+            }
+            tick();
+            setInterval(tick, 1000);
+        })();
+    </script>
 
     <!-- ========== BÖLÜM 3: FİTNESS TOPLULUĞUN ========== -->
     <section id="community" class="community-section">
