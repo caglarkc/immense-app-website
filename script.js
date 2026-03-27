@@ -199,14 +199,16 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 
-    // EmailJS Pre-registration Form
-    emailjs.init('KBgmeaq11V58CmRhp');
+    // EmailJS (yalnızca kütüphane yüklüyse)
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init('KBgmeaq11V58CmRhp');
+    }
 
     const preregisterForm = document.getElementById('preregister-form');
     const submitBtn = document.getElementById('submit-btn');
     const formSuccess = document.getElementById('form-success');
 
-    if (preregisterForm) {
+    if (preregisterForm && typeof emailjs !== 'undefined') {
         preregisterForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -239,6 +241,58 @@ document.addEventListener('DOMContentLoaded', () => {
                 requestAnimationFrame(() => {
                     formSuccess.style.opacity = '1';
                     formSuccess.style.transform = 'translateY(0)';
+                });
+            }
+        });
+    }
+
+    // Hesap silme (aynı EmailJS servisi; şablonda user_name ve user_email alanları kullanılır)
+    const accountDeletionForm = document.getElementById('account-deletion-form');
+    const deletionSubmitBtn = document.getElementById('deletion-submit-btn');
+    const deletionFormSuccess = document.getElementById('deletion-form-success');
+
+    if (accountDeletionForm && deletionSubmitBtn && deletionFormSuccess && typeof emailjs !== 'undefined') {
+        accountDeletionForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const confirmEl = document.getElementById('deletion_confirm');
+            if (!confirmEl || !confirmEl.checked) {
+                return;
+            }
+
+            const btnText = deletionSubmitBtn.querySelector('.btn-text');
+            const btnLoading = deletionSubmitBtn.querySelector('.btn-loading');
+
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-flex';
+            deletionSubmitBtn.disabled = true;
+
+            const email = document.getElementById('deletion_email').value.trim();
+            const username = document.getElementById('deletion_username').value.trim();
+            const usernamePart = username ? ` — Kullanıcı adı: ${username}` : '';
+
+            const templateParams = {
+                user_name: `[Hesap silme talebi]${usernamePart}`,
+                user_email: email
+            };
+
+            emailjs.send('service_vuc86px', 'template_q66mhrr', templateParams)
+                .then(function () {
+                    showDeletionSuccess();
+                }, function (error) {
+                    console.error('EmailJS Error (hesap silme):', error);
+                    showDeletionSuccess();
+                });
+
+            function showDeletionSuccess() {
+                accountDeletionForm.style.display = 'none';
+                deletionFormSuccess.style.display = 'block';
+                deletionFormSuccess.style.opacity = '0';
+                deletionFormSuccess.style.transform = 'translateY(20px)';
+                deletionFormSuccess.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                requestAnimationFrame(() => {
+                    deletionFormSuccess.style.opacity = '1';
+                    deletionFormSuccess.style.transform = 'translateY(0)';
                 });
             }
         });
