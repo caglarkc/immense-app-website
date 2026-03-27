@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Geri Sayım - 15 Mart 2026 00:00:00
-    const countdownDate = new Date('2026-04-16T00:00:00').getTime();
+    const countdownDate = new Date('2026-04-16T00:00:00+03:00').getTime();
     const daysEl = document.getElementById('countdown-days');
     const hoursEl = document.getElementById('countdown-hours');
     const minutesEl = document.getElementById('countdown-minutes');
