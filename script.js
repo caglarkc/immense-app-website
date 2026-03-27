@@ -57,47 +57,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorOutline = document.querySelector('.cursor-outline');
 
-    window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
+    if (cursorDot && cursorOutline) {
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
 
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
 
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
 
-    document.addEventListener('mousedown', () => {
-        cursorOutline.style.transform = 'translate(-50%, -50%) scale(0.8)';
-    });
+        document.addEventListener('mousedown', () => {
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(0.8)';
+        });
 
-    document.addEventListener('mouseup', () => {
-        cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-    });
+        document.addEventListener('mouseup', () => {
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+        });
+    }
 
     // Mobile Navigation
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navbar = document.querySelector('.navbar');
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    }
 
     // Sticky Navbar
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-            navbar.style.background = 'rgba(2, 6, 23, 0.95)';
-        } else {
-            navbar.classList.remove('scrolled');
-            navbar.style.background = 'rgba(2, 6, 23, 0.8)';
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbar.style.background = 'rgba(2, 6, 23, 0.95)';
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.style.background = 'rgba(2, 6, 23, 0.8)';
+            }
+        });
+    }
 
     // Smooth Scroll for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -108,8 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 target.scrollIntoView({
                     behavior: 'smooth'
                 });
-                // Close mobile menu if open
-                if (navMenu.classList.contains('active')) {
+                if (navMenu && hamburger && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
                     hamburger.classList.remove('active');
                 }
@@ -124,12 +129,14 @@ document.addEventListener('DOMContentLoaded', () => {
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const tabId = btn.getAttribute('data-tab');
+            const panel = tabId ? document.getElementById(`tab-${tabId}`) : null;
+            if (!panel) return;
 
             tabBtns.forEach(b => b.classList.remove('active'));
             tabPanels.forEach(p => p.classList.remove('active'));
 
             btn.classList.add('active');
-            document.getElementById(`tab-${tabId}`).classList.add('active');
+            panel.classList.add('active');
         });
     });
 

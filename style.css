@@ -2405,3 +2405,149 @@ h1, h2, h3, h4 {
         display: none;
     }
 }
+
+/* ========== LEGAL (Gizlilik vb.) ========== */
+.legal-page {
+    padding: 140px 0 80px;
+    min-height: 60vh;
+    background: var(--darker-bg);
+}
+
+.legal-container {
+    max-width: 720px;
+}
+
+.legal-header {
+    margin-bottom: 3rem;
+}
+
+.legal-header h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.legal-meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.legal-meta a {
+    color: var(--secondary-color);
+}
+
+.legal-meta a:hover {
+    text-decoration: underline;
+}
+
+.legal-intro {
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+.legal-play-hint {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 14px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.legal-play-hint i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.legal-play-hint a {
+    color: var(--secondary-color);
+    word-break: break-all;
+}
+
+.legal-play-hint a:hover {
+    text-decoration: underline;
+}
+
+.legal-section {
+    margin-bottom: 2.25rem;
+}
+
+.legal-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.legal-section p {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+}
+
+.legal-section p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-list {
+    list-style: disc;
+    padding-left: 1.35rem;
+    margin: 0.75rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+.legal-list li {
+    margin-bottom: 0.65rem;
+}
+
+.legal-list li:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section a {
+    color: var(--secondary-color);
+}
+
+.legal-section a:hover {
+    text-decoration: underline;
+}
+
+.legal-footer {
+    padding: 40px 0 50px;
+}
+
+.legal-footer .footer-bottom a {
+    color: var(--text-muted);
+}
+
+.legal-footer .footer-bottom a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .legal-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .legal-page {
+        padding: 120px 0 60px;
+    }
+
+    /* Tek sayfalık yasal şablon: menüyü her zaman göster */
+    .legal-page .nav-menu {
+        position: static !important;
+        transform: none !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        flex-direction: row !important;
+        width: auto !important;
+    }
+}
