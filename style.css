@@ -1092,6 +1092,14 @@ h1, h2, h3, h4 {
     font-size: 0.9rem;
 }
 
+.countdown-sublabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-top: 4px;
+    opacity: 0.7;
+}
+
 .countdown-timer {
     display: flex;
     align-items: center;

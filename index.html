@@ -133,11 +133,60 @@
         </div>
     </header>
 
-    <!-- ========== GERİ SAYIM ========== -->
+    <!-- ========== ÖN KAYIT ========== -->
+    <section id="preregister" class="preregister-section">
+        <div class="container">
+            <div class="preregister-content">
+                <div class="preregister-text">
+                    <h2>İlk Kullananlardan <span class="gradient-text">Ol</span></h2>
+                    <p>Ön kayıt ol, beta sürecine katıl ve Premium özellikleri yaşam boyu ücretsiz kullan.</p>
+                    <div class="trust-badges">
+                        <div class="trust-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Sınırlı Kontenjan</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-crown"></i>
+                            <span>Premium Yaşam Boyu Ücretsiz</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Spam Yok, Söz</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="preregister-form-wrapper">
+                    <form id="preregister-form" class="preregister-form">
+                        <div class="form-group">
+                            <label for="user_name">İsim</label>
+                            <input type="text" id="user_name" name="user_name" placeholder="Adın" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user_email">E-posta</label>
+                            <input type="email" id="user_email" name="user_email" placeholder="ornek@email.com"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                            <span class="btn-text">Ön Kayıt Ol</span>
+                            <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i>
+                                Gönderiliyor...</span>
+                        </button>
+                    </form>
+                    <div id="form-success" class="form-success" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Kaydın Alındı!</h3>
+                        <p>Erken erişim başladığında sana haber vereceğiz. Fitness topluluğumuza hoş geldin!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BETA SAYAÇ ========== -->
     <section class="countdown-section">
         <div class="container">
             <div class="countdown-wrap">
-                <span class="countdown-label"><i class="fas fa-rocket"></i> Yayınlanışa kalan süre — 15 Mart 2026</span>
+                <span class="countdown-label"><i class="fas fa-circle" style="color:#22c55e; font-size:0.65em; vertical-align:middle;"></i> Beta Test Aktif — Sen de Aramıza Katıl!</span>
                 <div class="countdown-timer">
                     <div class="countdown-unit">
                         <span class="countdown-value" id="countdown-days">00</span>
@@ -159,6 +208,7 @@
                         <span class="countdown-suffix">sn</span>
                     </div>
                 </div>
+                <span class="countdown-sublabel">Tüm platformlarda aktif sürüme kalan süre — 16 Nisan 2026</span>
             </div>
         </div>
     </section>
@@ -649,55 +699,6 @@
                     <div class="comp-col"><i class="fas fa-times red"></i></div>
                     <div class="comp-col"><i class="fas fa-times red"></i></div>
                     <div class="comp-col highlight"><i class="fas fa-check green"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== BÖLÜM 10: ÖN KAYIT ========== -->
-    <section id="preregister" class="preregister-section">
-        <div class="container">
-            <div class="preregister-content">
-                <div class="preregister-text">
-                    <h2>İlk Kullananlardan <span class="gradient-text">Ol</span></h2>
-                    <p>Ön kayıt ol, beta sürecine katıl ve Premium özellikleri yaşam boyu ücretsiz kullan.</p>
-                    <div class="trust-badges">
-                        <div class="trust-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Sınırlı Kontenjan</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-crown"></i>
-                            <span>Premium Yaşam Boyu Ücretsiz</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Spam Yok, Söz</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="preregister-form-wrapper">
-                    <form id="preregister-form" class="preregister-form">
-                        <div class="form-group">
-                            <label for="user_name">İsim</label>
-                            <input type="text" id="user_name" name="user_name" placeholder="Adın" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="user_email">E-posta</label>
-                            <input type="email" id="user_email" name="user_email" placeholder="ornek@email.com"
-                                required>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
-                            <span class="btn-text">Ön Kayıt Ol</span>
-                            <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i>
-                                Gönderiliyor...</span>
-                        </button>
-                    </form>
-                    <div id="form-success" class="form-success" style="display:none;">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Kaydın Alındı!</h3>
-                        <p>Erken erişim başladığında sana haber vereceğiz. Fitness topluluğumuza hoş geldin!</p>
-                    </div>
                 </div>
             </div>
         </div>
