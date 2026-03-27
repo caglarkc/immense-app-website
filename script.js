@@ -1,32 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Geri Sayım - 15 Mart 2026 00:00:00
-    const countdownDate = new Date('2026-04-16T00:00:00+03:00').getTime();
-    const daysEl = document.getElementById('countdown-days');
-    const hoursEl = document.getElementById('countdown-hours');
-    const minutesEl = document.getElementById('countdown-minutes');
-    const secondsEl = document.getElementById('countdown-seconds');
+    const countdownDate = new Date('April 16, 2026 00:00:00').getTime();
 
     function updateCountdown() {
-        const now = new Date().getTime();
-        const diff = countdownDate - now;
-
+        const daysEl = document.getElementById('countdown-days');
+        const hoursEl = document.getElementById('countdown-hours');
+        const minutesEl = document.getElementById('countdown-minutes');
+        const secondsEl = document.getElementById('countdown-seconds');
+        if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+        const diff = countdownDate - Date.now();
         if (diff <= 0) {
-            if (daysEl) daysEl.textContent = '00';
-            if (hoursEl) hoursEl.textContent = '00';
-            if (minutesEl) minutesEl.textContent = '00';
-            if (secondsEl) secondsEl.textContent = '00';
+            daysEl.textContent = hoursEl.textContent = minutesEl.textContent = secondsEl.textContent = '00';
             return;
         }
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
-        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
-        if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
-        if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+        daysEl.textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+        hoursEl.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+        minutesEl.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+        secondsEl.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
     }
 
     updateCountdown();
